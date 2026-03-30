@@ -332,7 +332,7 @@ export function TaskManager({ initialTasks }: TaskManagerProps) {
                     {format(new Date(), "EEEE, MMMM d")}
                   </p>
                   <h1 className="font-display mt-3 text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
-                    Momentum task manager for calm, focused execution.
+                    Baba's Great Task Manager
                   </h1>
                   <p className="mt-4 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
                     Capture work fast, prioritize what matters, and keep the whole

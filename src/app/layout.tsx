@@ -13,7 +13,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Momentum Task Manager",
+  title: "Baba's Great Task Manager",
   description:
     "A polished task manager built with Next.js, React, and SQLite for fast local productivity.",
 };
