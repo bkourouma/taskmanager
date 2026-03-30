@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --canvas: #f5f7fb;
+  --ink: #0f1728;
+  --panel: rgba(255, 255, 255, 0.72);
+  --panel-strong: rgba(255, 255, 255, 0.88);
+  --shadow: 0 24px 80px rgba(15, 23, 42, 0.12);
+}
+
+@theme inline {
+  --color-background: var(--canvas);
+  --color-foreground: var(--ink);
+  --font-sans: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background:
+    radial-gradient(circle at top left, rgba(255, 122, 24, 0.12), transparent 32%),
+    radial-gradient(circle at right 18%, rgba(59, 130, 246, 0.1), transparent 28%),
+    linear-gradient(180deg, #fbfcff 0%, #f5f7fb 48%, #eef3f8 100%);
+}
+
+body {
+  min-height: 100vh;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-body), sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(255, 122, 24, 0.18);
+  color: var(--ink);
+}
+
+.font-display {
+  font-family: var(--font-display), sans-serif;
+}
+
+.glass-panel {
+  background: linear-gradient(180deg, var(--panel-strong), var(--panel));
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.surface-input {
+  width: 100%;
+  border-radius: 1.1rem;
+  border: 1px solid rgba(203, 213, 225, 0.9);
+  background: rgba(255, 255, 255, 0.86);
+  padding: 0.95rem 1rem;
+  color: var(--ink);
+  outline: none;
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
+}
+
+.surface-input:focus {
+  border-color: rgba(249, 115, 22, 0.55);
+  box-shadow: 0 0 0 4px rgba(255, 122, 24, 0.12);
+}
+
+.surface-input::placeholder {
+  color: rgba(100, 116, 139, 0.9);
+}
+
+.task-shadow {
+  box-shadow:
+    0 16px 40px rgba(15, 23, 42, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.55);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
